@@ -39,7 +39,7 @@ Nav
     z-index: 10; */
     
 }
-.side-nav span{
+.side-nav span, .playlist-container{
     display: none;
 }
 
@@ -98,5 +98,11 @@ footer .container{
     }
     .side-nav span{
         display: block;
+    }
+    .playlist-container{
+        display: block;
+    }
+    .side-nav li svg{
+        width: 25px;
     }
 }
