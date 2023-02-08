@@ -10,18 +10,29 @@ Reset
 /**********************
 Common
 ***********************/
+body{
+    height: 100vh;
+    color: white;
+}
+
 .flex{
     display: flex;
 }
 .col{
     flex-direction: column;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    height: 100%;
+}
 /* main{
     min-width: 350px;
 } */
-main, footer{
-    position: relative;
-}
 
 
 /**********************
@@ -29,8 +40,9 @@ Nav
 ***********************/
 
 .side-nav .nav-container{
-    background-color: aqua;
+    background-color: #000;
     width: 50px;
+    height: 100%;
     padding: 5px 10px 10px 10px;
  /*    position: fixed;
     top: 0;
@@ -43,6 +55,9 @@ Nav
     display: none;
 }
 
+.logo-text{
+    display: none;
+}
 /**********************
 Header
 ***********************/
@@ -60,9 +75,11 @@ Header
 }
 .main-container {
     flex-wrap: wrap;
-/*     position: relative;
-    top: 90px;
-    left: 50px; */
+    overflow: scroll;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .content-container{
     background-color:#141922 ;
@@ -78,31 +95,35 @@ Footer
 
 footer .container{
     height: 90px;
-    background-color: cadetblue;
-    position: fixed;
-    bottom: 0;
-    left:0;
-    right:0;
-    z-index: 20;
+    background-color: #282828
+
 }
 
 
 
 
-@media screen and (min-width: 640px ) {
+@media screen and (min-width: 552px ) {
     .side-nav .nav-container{
         width: 230px ;
     }
     .top-header{
         left: 230px;
     }
-    .side-nav span{
+    .side-nav span,{
         display: block;
     }
     .playlist-container{
         display: block;
     }
-    .side-nav li svg{
+    .side-nav li svg {
         width: 25px;
+    }
+    .spotify-logo:first-child{
+        display: none;
+    }
+
+    .logo-text{
+        display: flex;
+        height: 90px;
     }
 }
