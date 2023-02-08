@@ -14,6 +14,7 @@ body{
     height: 100vh;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    min-height: 21.875rem;
 }
 
 .flex{
@@ -37,11 +38,25 @@ li{
 }
 
 .container{
-    height: 100%;
+    height: calc(100% - 90px);
 }
 
 .pt-13{
     padding-top: .8125rem;
+}
+.pb-13{
+    padding-bottom: .8125rem;
+}
+.mb-25{
+    margin-bottom: 1.5625rem;
+}
+
+.overflow-auto{
+    overflow: auto;
+}
+
+.overflow-hide{
+    overflow: hidden;
 }
 /* main{
     min-width: 350px;
@@ -54,31 +69,32 @@ Nav
 
 .side-nav .nav-container{
     background-color: #000;
-    width: 50px;
+    width: 3.125rem;
     height: 100%;
     padding: 5px 10px 10px 10px;
- /*    position: fixed;
-    top: 0;
-    left:0;
-    bottom:0;
-    z-index: 10; */
-    
+
+
 }
-.playlist-container{
+
+.playlist-container,
+.name-tag, 
+.nav-footer span,
+.logo-text
+{
     display: none;
 }
 
-.logo-text{
-    display: none;
-}
 .name-tag{
-    display: none;
-    padding-left: 5px;
+
+    padding-left: .3125rem;
 }
 .nav-footer{
     margin-top: auto;
 }
-
+.download svg{
+    width: .75rem;
+    height: .75rem;
+}
 .user-pic{
     background-color:#808080;
     width: 1.5625rem;
@@ -86,9 +102,14 @@ Nav
     border-radius: 50%
 }
 
-.nav-footer span{
-    display: none;
+.playlist-container h3{
+    padding: 1.875rem 0 .9375rem 0;
 }
+.playlist-container i{
+font-size: 2.25rem;
+padding-right: .625rem ;
+}
+
 /**********************
 Main
 ***********************/
@@ -96,17 +117,26 @@ Main
 .top-header{
     background-color: hwb(0 0% 100% / 0.418);
     height: 90px;
-    width: 100%;
+    width: calc(100% - 50px);
     position: fixed;
     top: 0;
     left:50px;
     right:0;
     align-items: center;
+    justify-content: flex-end;
+}
 
+.btn{
+    padding: 15px 40px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 25px;
+    margin-right: 20px;
 }
 .main-container {
     flex-wrap: wrap;
-    overflow: scroll;
+    overflow: auto;
     position: relative;
     top: 0;
     left: 0;
@@ -140,6 +170,7 @@ footer .container{
     }
     .top-header{
         left: 230px;
+        width: calc(100% - 230px);
     }
     .nav-footer span{
         display: flex;
@@ -147,13 +178,12 @@ footer .container{
     .playlist-container{
         display: block;
     }
-    .side-nav li svg, .download {
+    .side-nav li svg{
         width: 25px;
     }
-
-  /*   .download{
-        width: 20px;
-    } */
+    .download{
+        border-bottom: 1px solid white;
+    }
     .spotify-logo:first-child{
         display: none;
     }
