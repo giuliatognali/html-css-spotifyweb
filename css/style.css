@@ -146,10 +146,9 @@ Main
 .main-container {
     flex-wrap: wrap;
     overflow: auto;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
+    height: 100%;
+    width: 100%;
+
 }
 .content-container{
     background-color:#141922 ;
