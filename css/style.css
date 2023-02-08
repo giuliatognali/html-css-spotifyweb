@@ -29,6 +29,12 @@ body{
 .align-center{
     align-items: center;
 }
+.space-between{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -47,10 +53,19 @@ li{
 .pb-13{
     padding-bottom: .8125rem;
 }
+.pr-25{
+    padding-right: 1.5625rem;
+}
+
+.pb-45{
+    padding-bottom: 2.8125rem;
+}
 .mb-25{
     margin-bottom: 1.5625rem;
 }
-
+.mlr-45{
+    margin:0 2.8125rem;
+}
 .overflow-auto{
     overflow: auto;
 }
@@ -72,8 +87,6 @@ Nav
     width: 3.125rem;
     height: 100%;
     padding: 5px 10px 10px 10px;
-
-
 }
 
 .playlist-container,
@@ -144,6 +157,8 @@ Main
 }
 .content-container{
     background-color:#141922 ;
+    height: 100%;
+    width: 100%;
     padding-top: 110px;
    
 }
@@ -154,11 +169,56 @@ Main
 Footer
 ***********************/
 
-footer .container{
+.footer-container{
     height: 90px;
-    background-color: #282828
-
+    background-color: #282828;
+    padding: 0 .625rem;
 }
+
+.playing{
+    background-color: blue;
+    width: 30%;
+    height: 90px;
+}
+
+.player{ 
+    width: 40%;
+}.volume{
+    background-color: green;
+    width: 30%;
+    height: 90px;
+}
+
+.img-min{
+    width: 1.875rem;
+    height: 1.875rem;
+}
+.img-min img{
+    width: 100%;
+}
+.icons{
+    height: 35px;
+}
+.icons i{
+    padding-left: .9375rem;
+}
+.pulsanti{
+    background-color:red;
+    width: 11.875rem;
+}
+.timeline{
+    width: 100%;
+}
+.minutes{
+    height: .25rem;
+    width: 70%;
+    background-color: white;
+}
+/**********************
+RESPONSIVE
+***********************/
+
+
 
 
 
@@ -196,3 +256,25 @@ footer .container{
         display: block;
     }
 }
+
+@media screen and (min-width: 640px ){
+    .img-min{
+        width: 2.1875rem;
+        height: 2.1875rem;
+    }
+    
+}
+
+@media screen and (min-width: 878px ){
+
+    .icons {
+        flex-direction: row;
+        height: .9375rem;
+        }
+        .img-min{
+            width: 2.625rem;
+            height: 2.625rem;
+        }
+}
+
+
