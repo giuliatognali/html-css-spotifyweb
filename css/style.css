@@ -53,12 +53,12 @@ li{
 .pb-13{
     padding-bottom: .8125rem;
 }
-.pr-25{
-    padding-right: 1.5625rem;
+.pside-25{
+    padding: 0 .7813rem;
 }
 
-.pb-45{
-    padding-bottom: 2.8125rem;
+.mb-45{
+    margin-bottom: 2.8125rem;
 }
 .mb-25{
     margin-bottom: 1.5625rem;
@@ -73,10 +73,6 @@ li{
 .overflow-hide{
     overflow: hidden;
 }
-/* main{
-    min-width: 350px;
-} */
-
 
 /**********************
 Nav
@@ -159,11 +155,14 @@ Main
     background-color:#141922 ;
     height: 100%;
     width: 100%;
-    padding-top: 110px;
-   
+    padding-top: 110px; 
 }
 
-
+.content-container ul li:first-child {
+    border-bottom: .125rem solid #adff2f;
+    border-radius: .0625rem;
+    
+}
 
 /**********************
 Footer
@@ -176,16 +175,18 @@ Footer
 }
 
 .playing{
-    background-color: blue;
+/*     background-color: blue; */
     width: 30%;
+    max-width: 14.375rem;
     height: 90px;
 }
 
 .player{ 
     width: 40%;
 }.volume{
-    background-color: green;
+/*     background-color: green; */
     width: 30%;
+    max-width: 14.375rem;
     height: 90px;
 }
 
@@ -202,29 +203,36 @@ Footer
 .icons i{
     padding-left: .9375rem;
 }
+
 .pulsanti{
     width: 11.875rem;
     margin-bottom: 1.125rem;
+
+}
+.pulsanti .fa-circle-play{
+    font-size: 30px;
 }
 .timeline{
     width: 100%;
 }
 
-.minutes-total{
+.line-total{
     height: .25rem;
-    background-color: green;
+    background-color: white;
     width: 100%;
     margin:0 .625rem;
     border-radius: 2px;
 }
-.minutes{
+.line{
     display: block;
     height: .25rem;
     background-color: red;
     width: 30%;
     border-radius: 2px;  
 }
-
+.volume i{
+    padding-left: .625rem;
+}
 .timeline span{
     font-size: .5rem;
 }
