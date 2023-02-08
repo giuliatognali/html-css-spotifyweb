@@ -13,22 +13,35 @@ Common
 body{
     height: 100vh;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .flex{
     display: flex;
 }
+.wrap{
+    flex-wrap: wrap;
+}
 .col{
     flex-direction: column;
 }
-
+.align-center{
+    align-items: center;
+}
 a {
     text-decoration: none;
     color: inherit;
 }
+li{
+    list-style-type: none;
+}
 
 .container{
     height: 100%;
+}
+
+.pt-13{
+    padding-top: .8125rem;
 }
 /* main{
     min-width: 350px;
@@ -51,15 +64,33 @@ Nav
     z-index: 10; */
     
 }
-.side-nav span, .playlist-container{
+.playlist-container{
     display: none;
 }
 
 .logo-text{
     display: none;
 }
+.name-tag{
+    display: none;
+    padding-left: 5px;
+}
+.nav-footer{
+    margin-top: auto;
+}
+
+.user-pic{
+    background-color:#808080;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-radius: 50%
+}
+
+.nav-footer span{
+    display: none;
+}
 /**********************
-Header
+Main
 ***********************/
 
 .top-header{
@@ -105,19 +136,24 @@ footer .container{
 @media screen and (min-width: 552px ) {
     .side-nav .nav-container{
         width: 230px ;
+        padding: 0 20px 5px 20px;
     }
     .top-header{
         left: 230px;
     }
-    .side-nav span,{
-        display: block;
+    .nav-footer span{
+        display: flex;
     }
     .playlist-container{
         display: block;
     }
-    .side-nav li svg {
+    .side-nav li svg, .download {
         width: 25px;
     }
+
+  /*   .download{
+        width: 20px;
+    } */
     .spotify-logo:first-child{
         display: none;
     }
@@ -125,5 +161,8 @@ footer .container{
     .logo-text{
         display: flex;
         height: 90px;
+    }
+    .name-tag{
+        display: block;
     }
 }
