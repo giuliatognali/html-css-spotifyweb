@@ -129,9 +129,7 @@ padding-right: .625rem ;
 }
 .list-playlist{
     flex-grow: 1;
-    overflow-y: auto;
-    
-
+    overflow-y: auto;  
 }
 .list-playlist li{
     font-size: 9px;
@@ -181,7 +179,7 @@ Main
 }
 
 .card{
-    width: 13.125rem;
+    max-width: 13.125rem;
 /*     height: 13.125rem; */
 margin-right: 15px;
 }
@@ -189,6 +187,9 @@ margin-right: 15px;
     width: 100%;
 }
 
+/* .played .row{
+    justify-content: flex-start;
+} */
 
 
 /**********************
@@ -307,7 +308,7 @@ RESPONSIVE
         display: block;
     }
     .card{
-        width: 10.3125rem;}
+        max-width: 10.3125rem;}
 }
 /* 
 878 < m > 640   
@@ -318,7 +319,7 @@ RESPONSIVE
         height: 2.1875rem;
     }
     .card{
-        width: 8.75rem;}
+        max-width: 8.75rem;}
     
 }
 /* 
@@ -336,7 +337,12 @@ L >878
     }
 
     .card{
-        width:11.25rem;}
+        max-width:11.25rem;}
 }
 
 
+@media screen and (min-width: 1440px){
+    .played .row{
+        justify-content: space-between;}
+    
+}
