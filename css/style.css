@@ -11,12 +11,20 @@ Variables
 ***********************/
 :root{
     --green-primary: #adff2f;
-    --header-height: 90px;
+    --grey-default: #5a5a5a;
+    --header-height: 5.625rem;
+    --footer-height:5.625rem;
+    --nav-small:3.125rem;
+    --nav-big:14.375rem;
 }
 
 /**********************
 Typo
 ***********************/
+h1, h2 {
+    color: white;
+}
+
 h1{
     font-size: 1.125rem;
 }
@@ -36,13 +44,11 @@ Common
 ***********************/
 body {
     height: 100vh;
-    color: grey;
+    color:var(--grey-default);
     font-family: 'Montserrat', sans-serif;
     min-height: 15.625rem;
 }
-h1, h2 {
-    color: white;
-}
+
 .flex {
     display: flex;
 }
@@ -81,7 +87,7 @@ li {
 }
 
 .container {
-    height: calc(100% - 90px);
+    height: calc(100% - var(--footer-height));
 }
 
 .pt-13 {
@@ -124,15 +130,15 @@ Nav
 
 .side-nav .nav-container {
     background-color: #000;
-    width: 3.125rem;
+    width: var(--nav-small);
     height: 100%;
-    padding: 5px 10px 10px 10px;
+    padding: .3125rem .625rem .625rem .625rem;
 }
-.side-nav{
+.container{
     position: relative;
 }
 .green-border{
-    display: n;
+    display: none;
     position: absolute;
     left:0;
     top: var(--header-height);
@@ -195,22 +201,22 @@ Main
 .top-header {
     background-color: hwb(0 0% 100% / 0.418);
     height: var(--header-height);
-    width: calc(100% - 50px);
+    width: calc(100% - var(--nav-small));
     position: fixed;
     top: 0;
-    left: 50px;
+    left: var(--nav-small);
     right: 0;
     align-items: center;
     justify-content: flex-end;
 }
 
 .btn {
-    padding: 15px 40px;
+    padding: .9375rem 2.5rem;
     color: white;
     background-color: transparent;
     border: 1px solid white;
-    border-radius: 25px;
-    margin-right: 20px;
+    border-radius: 1.5625rem;
+    margin-right: 1.25rem;
 }
 
 .main-container {
@@ -233,7 +239,7 @@ Main
         content:"";
         position: absolute;
         left:calc(50% - 0.9375rem);
-        bottom:-3px;
+        bottom:-0.1875rem;
         width:1.875rem;
         border-bottom:2px solid var(--green-primary);
       }
@@ -242,9 +248,29 @@ Main
 .card {
     max-width: 13.125rem;
     /*     height: 13.125rem; */
-    margin-right: 15px;
+    margin-right: .9375rem;
 }
+.cover-album{
+    position: relative;
+}
+.cover-opaque{
+    display:none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top:0;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+.cover-opaque i{
+    font-size: 3.75rem;
+    position: absolute;
+    top:calc(50% - 1.875rem);
+    left:calc(50% - 1.875rem);
 
+
+}
 .card .cover-album img {
     width: 100%;
 }
@@ -259,7 +285,8 @@ Main
 .forjohn p{
     padding-bottom: 1.875rem;
 }
-.popolari .cover-album img {
+.popolari .cover-album img,
+.popolari .cover-opaque{
     border-radius: 50%;
 }
 .content-container h2{
@@ -287,7 +314,7 @@ Footer
     /*     background-color: blue; */
     width: 30%;
     max-width: 14.375rem;
-    height: 90px;
+    height: var(--footer-height);
 }
 
 .player {
@@ -302,7 +329,7 @@ Footer
     /*     background-color: green; */
     width: 30%;
     max-width: 14.375rem;
-    height: 90px;
+    height: var(--footer-height);
 }
 
 .img-min {
@@ -333,7 +360,7 @@ Footer
 }
 
 .pulsanti .fa-circle-play {
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .timeline {
@@ -342,18 +369,18 @@ Footer
 
 .line-total {
     height: .25rem;
-    background-color: white;
+    background-color:var(--grey-default);
     width: 100%;
     margin: 0 .625rem;
-    border-radius: 2px;
+    border-radius: .125rem;
 }
 
 .line {
     display: block;
     height: .25rem;
-    background-color: red;
+    background-color: white;
     width: 30%;
-    border-radius: 2px;
+    border-radius: .125rem;
 }
 
 .line-total{
@@ -368,7 +395,7 @@ Footer
     height: .25rem;
     background-color:var(--green-primary);
     width: 30%;
-    border-radius: 2px;
+    border-radius: .125rem;
 }
 
 .ball{
@@ -377,9 +404,9 @@ Footer
     left: 30%;
     bottom: -4px;
     background-color: white;
-    width: 12px;
+    width: .75rem;
     height: .75rem;
-    border-radius: 6px;
+    border-radius: .375rem;
 }
 .volume i {
     padding-left: .625rem;
@@ -392,23 +419,19 @@ Footer
 /**********************
 RESPONSIVE
 ***********************/
-
-
-
-
 /* 
 640 <s> 522 
  */
 
 @media screen and (min-width: 552px) {
     .side-nav .nav-container {
-        width: 230px;
+        width: var(--nav-big);
         padding: 0 20px 5px 20px;
     }
 
     .top-header {
-        left: 230px;
-        width: calc(100% - 230px);
+        left:var(--nav-big);
+        width: calc(100% - var(--nav-big));
     }
 
     .nav-footer span {
@@ -420,25 +443,25 @@ RESPONSIVE
     }
 
     .side-nav li svg {
-        width: 25px;
+        width: 1.5625rem;
     }
 
     .download {
-        border-bottom: 1px solid white;
+        border-bottom: .0625rem solid white;
         justify-content: flex-start;
     }
 
-    .spotify-logo:first-child
-    {
+    .spotify-logo:first-child{
         display: none;
     }
 
     .logo-text {
         display: flex;
-        height: 90px;
+        height: var(--header-height);
     }
 
-    .name-tag {
+    .name-tag,
+    .green-border {
         display: block;
     }
 
@@ -459,11 +482,10 @@ RESPONSIVE
     .card {
         max-width: 8.75rem;
     }
-
 }
 
 /* 
-L >878
+L > 878
  */
 @media screen and (min-width: 878px) {
 
@@ -510,7 +532,10 @@ a:hover{
 }
 
 .line-total:hover > .ball,
-.line-total:hover > .line-green
-{
+.line-total:hover > .line-green{
     display: block;
+}
+
+.cover-album:hover > .cover-opaque{
+    display: inline-block;
 }
