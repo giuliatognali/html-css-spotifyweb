@@ -1,90 +1,120 @@
 /**********************
 Reset
 ***********************/
-*{
-    margin: 0 ;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+/**********************
+Typo
+***********************/
+h1{
+    font-size: 1.125rem;
+}
+h2{
+    font-size: .75rem;
+}
+
+.playlist-container span,
+.list-playlist li,
+p, a{
+    font-size:.625rem;
+    font-weight: 800;
 }
 
 /**********************
 Common
 ***********************/
-body{
+body {
     height: 100vh;
-    color: white;
+    color: grey;
     font-family: 'Montserrat', sans-serif;
-    min-height: 21.875rem;
+    min-height: 15.625rem;
 }
-
-.flex{
+h1, h2, h3, h4 {
+    color: white;
+}
+.flex {
     display: flex;
 }
-.wrap{
+
+.wrap {
     flex-wrap: wrap;
 }
-.col{
+
+.col {
     flex-direction: column;
 }
-.align-center{
+
+.align-center {
     align-items: center;
 }
-.space-between{
+
+.space-between {
     justify-content: space-between;
 }
-.justify-center{
+
+.justify-center {
     justify-content: center;
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
-li{
+
+li {
     list-style-type: none;
 }
 
-.container{
+.container {
     height: calc(100% - 90px);
 }
 
-.pt-13{
+.pt-13 {
     padding-top: .8125rem;
 }
-.pb-13{
+
+.pb-13 {
     padding-bottom: .8125rem;
 }
-.pside-20{
+
+.pside-20 {
     padding: 0 .625rem;
 }
-.pb-35{
+
+.pb-35 {
     padding-bottom: 2.1875rem;
 }
-.mb-45{
+
+.mb-45 {
     margin-bottom: 2.8125rem;
 }
-.mb-25{
+
+.mb-25 {
     margin-bottom: 1.5625rem;
 }
-/* .mlr-45{
-    margin:0 2.5rem;
-} */
-.overflow-auto{
+
+.overflow-auto {
     overflow-y: auto;
 }
 
-.overflow-hide{
+.overflow-hide {
     overflow: hidden;
 }
+
+
 
 /**********************
 Nav
 ***********************/
 
-.side-nav .nav-container{
+.side-nav .nav-container {
     background-color: #000;
     width: 3.125rem;
     height: 100%;
@@ -92,65 +122,70 @@ Nav
 }
 
 .playlist-container,
-.name-tag, 
+.name-tag,
 .nav-footer span,
-.logo-text
-{
+.logo-text {
     display: none;
 }
 
-.name-tag{
+.name-tag {
 
     padding-left: .3125rem;
 }
-.nav-footer{
+
+.nav-footer {
     margin-top: auto;
 }
-.download svg{
+
+.download svg {
     width: .75rem;
     height: .75rem;
 }
-.user-pic svg{
-    background-color:#808080;
+
+.user-pic svg {
+    background-color: #808080;
     width: 1.5625rem;
     height: 1.5625rem;
     border-radius: 50%
 }
-.playlist-container{
+
+.playlist-container {
     flex-grow: 1;
 
 }
-.playlist-container h3{
+
+.playlist-container h2 {
     padding: 1.875rem 0 .9375rem 0;
 }
-.playlist-container i{
-font-size: 2.25rem;
-padding-right: .625rem ;
+
+.playlist-container i {
+    font-size: 2.25rem;
+    padding-right: .625rem;
 }
-.list-playlist{
+
+.list-playlist {
     flex-grow: 1;
-    overflow-y: auto;  
+    overflow-y: auto;
 }
-.list-playlist li{
-    font-size: 9px;
-}
+
+
 /**********************
 Main
 ***********************/
 
-.top-header{
+.top-header {
     background-color: hwb(0 0% 100% / 0.418);
     height: 90px;
     width: calc(100% - 50px);
     position: fixed;
     top: 0;
-    left:50px;
-    right:0;
+    left: 50px;
+    right: 0;
     align-items: center;
     justify-content: flex-end;
 }
 
-.btn{
+.btn {
     padding: 15px 40px;
     color: white;
     background-color: transparent;
@@ -158,6 +193,7 @@ Main
     border-radius: 25px;
     margin-right: 20px;
 }
+
 .main-container {
     flex-wrap: wrap;
     overflow: auto;
@@ -165,28 +201,48 @@ Main
     width: 100%;
 }
 
-.content-container{
-    background-color:#141922 ;
-/*     height: 100%; */
+.content-container {
+    background-color: #141922;
+    /*     height: 100%; */
     width: 100%;
-    padding: 6.875rem 1.25rem 0 1.25rem;
+    padding: 6.875rem 0 0 1.25rem;
 }
 
 .content-container ul li:first-child {
     border-bottom: .125rem solid #adff2f;
-    border-radius: .0625rem; 
+    border-radius: .0625rem;
 
 }
 
-.card{
+.card {
     max-width: 13.125rem;
-/*     height: 13.125rem; */
-margin-right: 15px;
+    /*     height: 13.125rem; */
+    margin-right: 15px;
 }
-.card .cover-album img{
+
+.card .cover-album img {
     width: 100%;
 }
 
+.popolari h1,
+.forjohn h1{
+    padding-top: 3.125rem;
+    padding-bottom: 1.25rem;
+}
+
+.popolari p,
+.forjohn p{
+    padding-bottom: 1.875rem;
+}
+.popolari .cover-album img {
+    border-radius: 50%;
+}
+.content-container h2{
+    padding-top: 1.375rem;
+}
+.content-container p{
+    padding: .9375rem 0;
+}
 /* .played .row{
     justify-content: flex-start;
 } */
@@ -196,74 +252,86 @@ margin-right: 15px;
 Footer
 ***********************/
 
-.footer-container{
+.footer-container {
     height: 90px;
     background-color: #282828;
     padding: 0 .625rem;
 }
 
-.playing{
-/*     background-color: blue; */
+.playing {
+    /*     background-color: blue; */
     width: 30%;
     max-width: 14.375rem;
     height: 90px;
 }
 
-.player{ 
+.player {
     width: 40%;
-}.volume{
-/*     background-color: green; */
+}
+
+.volume {
+    /*     background-color: green; */
     width: 30%;
     max-width: 14.375rem;
     height: 90px;
 }
 
-.img-min{
+.img-min {
     width: 1.875rem;
     height: 1.875rem;
+    margin-right: .8125rem;
 }
-.img-min img{
+
+.img-min img {
     width: 100%;
 }
-.icons{
+
+.icons {
     height: 2.1875rem;
 }
-.icons i{
+
+.icons i {
     padding-left: .9375rem;
 }
 
-.pulsanti{
+.pulsanti {
     width: 11.875rem;
     margin-bottom: 1.125rem;
 
 }
-.pulsanti .fa-circle-play{
+
+.pulsanti .fa-circle-play {
     font-size: 30px;
 }
-.timeline{
+
+.timeline {
     width: 100%;
 }
 
-.line-total{
+.line-total {
     height: .25rem;
     background-color: white;
     width: 100%;
-    margin:0 .625rem;
+    margin: 0 .625rem;
     border-radius: 2px;
 }
-.line{
+
+.line {
     display: block;
     height: .25rem;
     background-color: red;
     width: 30%;
-    border-radius: 2px;  
+    border-radius: 2px;
 }
-.volume i{
+
+.volume i {
     padding-left: .625rem;
 }
-.timeline span{
+
+.timeline span {
     font-size: .5rem;
 }
+
 /**********************
 RESPONSIVE
 ***********************/
@@ -275,74 +343,109 @@ RESPONSIVE
 640 <s> 522 
  */
 
-@media screen and (min-width: 552px ) {
-    .side-nav .nav-container{
-        width: 230px ;
+@media screen and (min-width: 552px) {
+    .side-nav .nav-container {
+        width: 230px;
         padding: 0 20px 5px 20px;
     }
-    .top-header{
+
+    .top-header {
         left: 230px;
         width: calc(100% - 230px);
     }
-    .nav-footer span{
+
+    .nav-footer span {
         display: initial;
     }
-    .playlist-container{
+
+    .playlist-container {
         display: flex;
     }
-    .side-nav li svg{
+
+    .side-nav li svg {
         width: 25px;
     }
-    .download{
+
+    .download {
         border-bottom: 1px solid white;
     }
-    .spotify-logo:first-child{
+
+    .spotify-logo:first-child {
         display: none;
     }
 
-    .logo-text{
+    .logo-text {
         display: flex;
         height: 90px;
     }
-    .name-tag{
+
+    .name-tag {
         display: block;
     }
-    .card{
-        max-width: 10.3125rem;}
+
+    .card {
+        max-width: 10.3125rem;
+    }
 }
+
 /* 
 878 < m > 640   
 */
-@media screen and (min-width: 640px ){
-    .img-min{
+@media screen and (min-width: 640px) {
+    .img-min {
         width: 2.1875rem;
         height: 2.1875rem;
     }
-    .card{
-        max-width: 8.75rem;}
-    
+
+    .card {
+        max-width: 8.75rem;
+    }
+
 }
+
 /* 
 L >878
  */
-@media screen and (min-width: 878px){
+@media screen and (min-width: 878px) {
 
     .icons {
         flex-direction: row;
         height: .9375rem;
-        }
-    .img-min{
-            width: 2.625rem;
-            height: 2.625rem;
     }
 
-    .card{
-        max-width:11.25rem;}
+    .img-min {
+        width: 2.625rem;
+        height: 2.625rem;
+    }
+
+    .card {
+        max-width: 11.25rem;
+    }
 }
 
 
-@media screen and (min-width: 1440px){
-    .played .row{
-        justify-content: space-between;}
-    
+@media screen and (min-width: 1440px) {
+    .played .row {
+        justify-content: space-between;
+    }
+
+}
+
+
+/**********************
+DECORATION
+***********************/
+
+a:hover{
+    color:white;
+
+}
+.pulsanti .fa-circle-play:hover{
+    transform: scale(1.2);
+}
+.btn:hover{
+    transform: scale(1.05);
+}
+.underline:hover{
+    text-decoration: underline solid white  1px;
 }
