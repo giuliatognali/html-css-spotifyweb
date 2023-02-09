@@ -7,6 +7,14 @@ Reset
     box-sizing: border-box;
 }
 /**********************
+Variables
+***********************/
+:root{
+    --green-primary: #adff2f;
+    --header-height: 90px;
+}
+
+/**********************
 Typo
 ***********************/
 h1{
@@ -120,7 +128,19 @@ Nav
     height: 100%;
     padding: 5px 10px 10px 10px;
 }
-
+.side-nav{
+    position: relative;
+}
+.green-border{
+    display: n;
+    position: absolute;
+    left:0;
+    top: var(--header-height);
+    height: 2.1875rem;
+    width: .1875rem;
+    background-color:var(--green-primary);
+    z-index: 10;
+}
 .playlist-container,
 .name-tag,
 .nav-footer span,
@@ -129,7 +149,6 @@ Nav
 }
 
 .name-tag {
-
     padding-left: .3125rem;
 }
 
@@ -175,7 +194,7 @@ Main
 
 .top-header {
     background-color: hwb(0 0% 100% / 0.418);
-    height: 90px;
+    height: var(--header-height);
     width: calc(100% - 50px);
     position: fixed;
     top: 0;
@@ -207,12 +226,18 @@ Main
     width: 100%;
     padding: 6.875rem 0 0 1.25rem;
 }
-
-.content-container ul li:first-child {
-    border-bottom: .125rem solid #adff2f;
-    border-radius: .0625rem;
-
+.content-container ul li:first-child{
+    position: relative;
 }
+.content-container ul li:first-child:before {
+        content:"";
+        position: absolute;
+        left:calc(50% - 0.9375rem);
+        bottom:-3px;
+        width:1.875rem;
+        border-bottom:2px solid var(--green-primary);
+      }
+
 
 .card {
     max-width: 13.125rem;
@@ -341,7 +366,7 @@ Footer
     left:0;
     top:0;
     height: .25rem;
-    background-color:green;
+    background-color:var(--green-primary);
     width: 30%;
     border-radius: 2px;
 }
@@ -400,9 +425,11 @@ RESPONSIVE
 
     .download {
         border-bottom: 1px solid white;
+        justify-content: flex-start;
     }
 
-    .spotify-logo:first-child {
+    .spotify-logo:first-child
+    {
         display: none;
     }
 
@@ -481,11 +508,7 @@ a:hover{
 .underline:hover{
     text-decoration: underline solid white  1px;
 }
-/* .line-green:hover,
-.ball:hover{
-    display: inline-block;
 
-} */
 .line-total:hover > .ball,
 .line-total:hover > .line-green
 {
