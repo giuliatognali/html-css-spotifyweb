@@ -57,8 +57,8 @@ li{
 .pb-13{
     padding-bottom: .8125rem;
 }
-.pside-25{
-    padding: 0 .7813rem;
+.pside-20{
+    padding: 0 .625rem;
 }
 .pb-35{
     padding-bottom: 2.1875rem;
@@ -166,15 +166,13 @@ Main
     height: 100%;
     width: 100%;
 }
-/* .played *{
-    margin:0 auto;
-} */
 
 .content-container{
     background-color:#141922 ;
 /*     height: 100%; */
     width: 100%;
     padding-top: 110px; 
+    padding-left: 20px;
 }
 
 .content-container ul li:first-child {
@@ -182,13 +180,22 @@ Main
     border-radius: .0625rem; 
 
 }
-.card .music-img{
+
+.card{
+    width: calc(100% / 2);
+
+
+}
+/* .card .cover-album{
     width: 13.125rem;
     height: 13.125rem;
-}
-.card .music-img img{
+} */
+.card .cover-album img{
     width: 100%;
 }
+
+
+
 /**********************
 Footer
 ***********************/
@@ -268,7 +275,9 @@ RESPONSIVE
 
 
 
-
+/* 
+640 <s> 522 
+ */
 
 @media screen and (min-width: 552px ) {
     .side-nav .nav-container{
@@ -302,22 +311,30 @@ RESPONSIVE
     .name-tag{
         display: block;
     }
-    .card .music-img{
+    .card .cover-album{
         width: 10.3125rem;
         height: 10.3125rem;}
 }
-
+/* 
+878 < m > 640   
+*/
 @media screen and (min-width: 640px ){
     .img-min{
         width: 2.1875rem;
         height: 2.1875rem;
     }
-    .card .music-img{
+/*     .card .cover-album{
         width: 9rem;
-        height: 9rem;}
+        height: 9rem;} */
+    
+    .card{
+            width: calc(100% / 4);
+        }
     
 }
-
+/* 
+L >878
+ */
 @media screen and (min-width: 878px){
 
     .icons {
@@ -328,9 +345,13 @@ RESPONSIVE
             width: 2.625rem;
             height: 2.625rem;
     }
-    .card .music-img{
+    .card{
+        width: calc(100% / 6);
+    }
+
+/*     .card .cover-album{
         width: 11.25rem;
-        height: 11.25rem;}
+        height: 11.25rem;} */
 }
 
 
