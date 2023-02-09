@@ -32,7 +32,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     min-height: 15.625rem;
 }
-h1, h2, h3, h4 {
+h1, h2 {
     color: white;
 }
 .flex {
@@ -268,6 +268,10 @@ Footer
 .player {
     width: 40%;
 }
+.player i,
+.volume i{
+    color: white;
+}
 
 .volume {
     /*     background-color: green; */
@@ -290,6 +294,9 @@ Footer
     height: 2.1875rem;
 }
 
+.icons a {
+    font-size: 1rem;
+}
 .icons i {
     padding-left: .9375rem;
 }
@@ -324,6 +331,31 @@ Footer
     border-radius: 2px;
 }
 
+.line-total{
+    display: block;
+    position: relative;
+}
+.line-green {
+    display: none;
+    position: absolute;
+    left:0;
+    top:0;
+    height: .25rem;
+    background-color:green;
+    width: 30%;
+    border-radius: 2px;
+}
+
+.ball{
+    display: none;
+    position: absolute;
+    left: 30%;
+    bottom: -4px;
+    background-color: white;
+    width: 12px;
+    height: .75rem;
+    border-radius: 6px;
+}
 .volume i {
     padding-left: .625rem;
 }
@@ -448,4 +480,14 @@ a:hover{
 }
 .underline:hover{
     text-decoration: underline solid white  1px;
+}
+/* .line-green:hover,
+.ball:hover{
+    display: inline-block;
+
+} */
+.line-total:hover > .ball,
+.line-total:hover > .line-green
+{
+    display: block;
 }
