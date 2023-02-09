@@ -69,11 +69,11 @@ li{
 .mb-25{
     margin-bottom: 1.5625rem;
 }
-.mlr-45{
-    margin:0 2.8125rem;
-}
+/* .mlr-45{
+    margin:0 2.5rem;
+} */
 .overflow-auto{
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .overflow-hide{
@@ -110,13 +110,16 @@ Nav
     width: .75rem;
     height: .75rem;
 }
-.user-pic{
+.user-pic svg{
     background-color:#808080;
     width: 1.5625rem;
     height: 1.5625rem;
     border-radius: 50%
 }
+.playlist-container{
+    flex-grow: 1;
 
+}
 .playlist-container h3{
     padding: 1.875rem 0 .9375rem 0;
 }
@@ -124,7 +127,15 @@ Nav
 font-size: 2.25rem;
 padding-right: .625rem ;
 }
+.list-playlist{
+    flex-grow: 1;
+    overflow-y: auto;
+    
 
+}
+.list-playlist li{
+    font-size: 9px;
+}
 /**********************
 Main
 ***********************/
@@ -155,13 +166,13 @@ Main
     height: 100%;
     width: 100%;
 }
-.played *{
+/* .played *{
     margin:0 auto;
-}
+} */
 
 .content-container{
     background-color:#141922 ;
-    height: 100%;
+/*     height: 100%; */
     width: 100%;
     padding-top: 110px; 
 }
@@ -269,10 +280,10 @@ RESPONSIVE
         width: calc(100% - 230px);
     }
     .nav-footer span{
-        display: flex;
+        display: initial;
     }
     .playlist-container{
-        display: block;
+        display: flex;
     }
     .side-nav li svg{
         width: 25px;
@@ -301,19 +312,25 @@ RESPONSIVE
         width: 2.1875rem;
         height: 2.1875rem;
     }
+    .card .music-img{
+        width: 9rem;
+        height: 9rem;}
     
 }
 
-@media screen and (min-width: 878px ){
+@media screen and (min-width: 878px){
 
     .icons {
         flex-direction: row;
         height: .9375rem;
         }
-        .img-min{
+    .img-min{
             width: 2.625rem;
             height: 2.625rem;
-        }
+    }
+    .card .music-img{
+        width: 11.25rem;
+        height: 11.25rem;}
 }
 
 
